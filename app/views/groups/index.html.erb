@@ -1,11 +1,10 @@
-<h1>Groups</h1>
+<h1>Transactions</h1>
 
 <div id="groups">
   <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
+    <%= link_to group_path(group) do %>
+      <%= render group %>
+    <% end %>
   <% end %>
 </div>
 

@@ -1,11 +1,19 @@
-<h1>Categories</h1>
+<nav class="nav p-3 d-flex justify-content-between">
+  <%= render "layouts/menu" %>
+  <h3>Categories</h3>
+  <div></div>
+</nav>
 
-<div id="groups">
+<section id="groups" class="container-fluid">
   <% @groups.each do |group| %>
-    <%= link_to group_records_path(group.id) do %>
+    <%= link_to group_records_path(group.id), class: "text-decoration-none text-dark" do %>
       <%= render group %>
     <% end %>
   <% end %>
-</div>
+</section>
 
-<%= link_to "Add Category", new_group_path %>
+<footer class="m-0 p-3 border">
+  <div class="text-center p-2 border border-white rounded">
+    <%= link_to "Add Category", new_group_path, class: "text-decoration-none text-white" %>
+  </div>
+</footer>

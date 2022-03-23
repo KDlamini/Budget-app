@@ -1,0 +1,7 @@
+<div id="<%= dom_id group %>">
+    <img src="<%= (url_for(group.image))%>">
+    <p><%= group.name %></p>
+    <p>Transactions: <%= group.total_records %></p>
+    <p><%= group.created_at.strftime('%d %b %Y') %></p>
+    <p>$<%= group.total_records_amount %></p>
+</div>

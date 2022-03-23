@@ -1,0 +1,11 @@
+<h1>Categories</h1>
+
+<div id="groups">
+  <% @groups.each do |group| %>
+    <%= link_to group_records_path(group.id) do %>
+      <%= render group %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "Add Category", new_group_path %>

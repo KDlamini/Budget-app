@@ -1,0 +1,8 @@
+<%= render @group %>
+
+<div>
+  <%= link_to "< Back", groups_path %>
+  <%= link_to "Edit Category", edit_group_path(@group) %> |
+
+  <%= button_to "Delete", @group, method: :delete %>
+</div>

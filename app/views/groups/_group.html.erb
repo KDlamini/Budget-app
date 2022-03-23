@@ -1,15 +1,13 @@
-<div id="<%= dom_id group %>" class="container my-5">
-    <div class="category row border">
-      <div class="col-2 icon p-0">
-        <img src="<%= (url_for(group.image))%>" class="thumbnail icon-img">
-      </div>
-      <div class="col-10 p-2">
-        <div class="d-flex justify-content-between">
-          <p><%= group.name %></p>
-          <p>$<%= group.total_records_amount %></p>
-        </div>
-        <p>Transactions: <%= group.total_records %></p>
-        <p><%= group.created_at.strftime('%d %b %Y') %></p>
-      </div>
+<div id="<%= dom_id group %>" class="category mb-3 d-flex border">
+  <div class="icon p-2">
+    <img src="<%= (url_for(group.image))%>" class="thumbnail icon-img">
+  </div>
+  <div class="flex-fill p-2">
+    <div class="d-flex justify-content-between">
+      <p><%= group.name %></p>
+      <b>$<%= group.total_records_amount %></b>
     </div>
+    <p class="text-secondary">Transactions: <%= group.total_records %></p>
+    <p class="text-secondary"><%= group.created_at.strftime('%d %b %Y') %></p>
+  </div>
 </div>

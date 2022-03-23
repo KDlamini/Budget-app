@@ -16,13 +16,6 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <% if notice || alert %>
-        <div class="container col-6 text-center alert alert-success alert-dismissible fade show" role="alert">
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    <% end %>
     <%= yield %>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

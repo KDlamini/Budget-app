@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-  before_action :set_record, only: %i[ show edit update destroy ]
+  before_action :set_record, only: %i[show edit update destroy]
 
   # GET /records
   def index
@@ -7,9 +7,8 @@ class RecordsController < ApplicationController
     @records = Record.where(author_id: current_user.id).where(group_id: params[:group_id])
   end
 
-  # GET /records/1 
-  def show
-  end
+  # GET /records/1
+  def show; end
 
   # GET /records/new
   def new
@@ -18,8 +17,7 @@ class RecordsController < ApplicationController
   end
 
   # GET /records/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /record
   def create
@@ -28,7 +26,7 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.save
-        format.html { redirect_to group_records_path(@group), notice: "Record was successfully created." }
+        format.html { redirect_to group_records_path(@group), notice: 'Record was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -41,7 +39,7 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.update(record_params)
-        format.html { redirect_to record_url(@record), notice: "Record was successfully updated." }
+        format.html { redirect_to record_url(@record), notice: 'Record was successfully updated.' }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -53,22 +51,23 @@ class RecordsController < ApplicationController
     @record.destroy
 
     respond_to do |format|
-      format.html { redirect_to records_url, notice: "Record was successfully destroyed." }
+      format.html { redirect_to records_url, notice: 'Record was successfully destroyed.' }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_record
-      @record = Record.find(params[:id])
-    end
 
-    def set_group
-      @group = Group.find(params[:group_id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_record
+    @record = Record.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def record_params
-      params.require(:record).permit(:name, :amount, :group_id)
-    end
+  def set_group
+    @group = Group.find(params[:group_id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def record_params
+    params.require(:record).permit(:name, :amount, :group_id)
+  end
 end

@@ -35,6 +35,13 @@
   height: 100px;
 }
 
+.new-btn {
+  display: block;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
 footer {
   background: #61b526;
 }

@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 .nav {
   background: #3167a1;
   color: #fff;
@@ -20,14 +21,18 @@
 }
 
 .category {
-  height: 150px;
+  height: auto;
+}
+
+.icon {
+  height: inherit;
 }
 
 .icon-img {
   display: block;
   object-fit: fill;
-  width: 80%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
 }
 
 footer {

@@ -1,8 +1,8 @@
-<h1>Transactions</h1>
+<h1>Categories</h1>
 
 <div id="groups">
   <% @groups.each do |group| %>
-    <%= link_to group_path(group) do %>
+    <%= link_to group_records_path(group.id) do %>
       <%= render group %>
     <% end %>
   <% end %>

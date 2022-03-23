@@ -1,12 +1,12 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
 
-  # GET /groups or /groups.json
+  # GET /groups
   def index
     @groups = Group.all
   end
 
-  # GET /groups/1 or /groups/1.json
+  # GET /groups/1
   def show; end
 
   # GET /groups/new
@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
   # GET /groups/1/edit
   def edit; end
 
-  # POST /groups or /groups.json
+  # POST /groups
   def create
     @group = Group.new(group_params)
 
@@ -30,7 +30,7 @@ class GroupsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /groups/1 or /groups/1.json
+  # PATCH/PUT /groups/1
   def update
     respond_to do |format|
       if @group.update(group_params)
@@ -41,7 +41,7 @@ class GroupsController < ApplicationController
     end
   end
 
-  # DELETE /groups/1 or /groups/1.json
+  # DELETE /groups/1
   def destroy
     @group.destroy
 

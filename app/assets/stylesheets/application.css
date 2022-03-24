@@ -19,6 +19,23 @@
   color: #fff;
 }
 
+.home {
+  height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.logo-text {
+  background: -webkit-linear-gradient(#24aae0, #4d87be, #0e0a4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .category {
   height: auto;
 }
@@ -41,6 +58,7 @@
   height: 100%;
 }
 
-footer {
+footer,
+.home-actions {
   background: #61b526;
 }

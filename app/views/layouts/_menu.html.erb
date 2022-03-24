@@ -15,7 +15,7 @@
             <%= link_to "Manage", "/groups/show", class: "text-decoration-none nav-link" %>
         </li>
         <li class="nav-item">
-            <%= link_to "Logout", destroy_user_session_path, class: "text-decoration-none nav-link" %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "text-decoration-none nav-link" %>
         </li>
     </ul>
     </div>

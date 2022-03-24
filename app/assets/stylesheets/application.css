@@ -14,10 +14,9 @@
  *= require_self
  */
 
-.nav {
+.navbar {
   background: #3167a1;
   color: #fff;
-  text-align: center;
 }
 
 .category {

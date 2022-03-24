@@ -11,7 +11,7 @@
 
   <div class="container my-5">
     <% @groups.each do |group| %>
-      <%= link_to group_records_path(group.id), class: "text-decoration-none text-dark" do %>
+      <%= link_to group_records_path(group), class: "text-decoration-none text-dark" do %>
         <%= render group %>
       <% end %>
     <% end %>

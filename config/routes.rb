@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     root 'homes#index'
     resources :users, only:  [:index]
     resources :groups  do
-      resources :records,  only:  [:index, :new, :create, :destroy]
+      resources :records,  only:  [:index, :new, :create, :show, :destroy]
     end
   end
 end

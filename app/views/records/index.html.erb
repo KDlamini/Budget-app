@@ -1,7 +1,9 @@
-<nav class="nav p-3 d-flex justify-content-between">
-  <%= link_to "<", groups_path, class: "text-decoration-none fs-3 px-2 text-white" %>
-  <h3>Transactions</h3>
-  <%= render "layouts/menu" %>
+<nav class="navbar p-3 navbar-light">
+  <div class="container-fluid">
+    <%= link_to "<", groups_path, class: "text-decoration-none fs-3 px-2 text-white" %>
+    <h3>Transactions</h3>
+    <%= render "layouts/menu" %>
+  </div>
 </nav>
 
 <div id="records" class="container-fluid p-0">

@@ -48,10 +48,11 @@ class RecordsController < ApplicationController
 
   # DELETE /records/1
   def destroy
+    set_group
     @record.destroy
 
     respond_to do |format|
-      format.html { redirect_to records_url, notice: 'Record was successfully destroyed.' }
+      format.html { redirect_to group_records_path(@group), notice: 'Record was successfully destroyed.' }
     end
   end
 

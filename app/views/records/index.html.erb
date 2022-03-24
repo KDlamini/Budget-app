@@ -11,7 +11,9 @@
   <%= render "layouts/alerts" %>
 
   <% @records.each do |record| %>
-    <%= render record %>
+    <%= link_to group_record_path(record.group_id, record.id), class: "text-decoration-none text-dark" do %>
+      <%= render record %>
+    <% end %>
   <% end %>
 </div>
 

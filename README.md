@@ -7,7 +7,7 @@ A mobile web application where you can manage your budget: you have a list of tr
 - Ruby on Rails
 
 ## Live Demo
-[Heroku](https://tasty-dishes-52422.herokuapp.com/)
+[Heroku](https://young-falls-16975.herokuapp.com/)
 
 ## Additional Tools
 

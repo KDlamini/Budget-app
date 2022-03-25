@@ -4,8 +4,8 @@ RSpec.describe Record, type: :model do
   before(:each) do
     @file = fixture_file_upload('Gosave.png', 'image/png')
     @user = User.new(id: 5, name: 'Senzo', email: 'senzo@gmail.com')
-    @group = Group.new(id: 5, name: "Leslie Pies", image: @file, author_id: @user.id)
-    @record = @group.records.new(name: "Apple Pie", amount: 5, author_id: @user.id, group_id: @group.id)
+    @group = Group.new(id: 5, name: 'Leslie Pies', image: @file, author_id: @user.id)
+    @record = @group.records.new(name: 'Apple Pie', amount: 5, author_id: @user.id, group_id: @group.id)
   end
 
   describe 'validation tests' do

@@ -52,6 +52,8 @@ gem 'bootsnap', require: false
 
 gem 'devise'
 
+gem 'dotenv-rails'
+
 gem 'cancancan', '~> 1.9'
 
 group :development, :test do

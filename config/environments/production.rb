@@ -63,20 +63,10 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "mindly_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = {:host => 'https://young-falls-16975.herokuapp.com/', :protocol => 'http'}
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :domain => 'https://young-falls-16975.herokuapp.com/',
-    :authentication => :plain,
-    :enable_starttls_auto => true,
-    :user_name => 'iamvision700@protonmail.com',
-    :password => 'iamvision'
-  }
-
+  
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -100,4 +90,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: 'https://young-falls-16975.herokuapp.com/' }
 end
